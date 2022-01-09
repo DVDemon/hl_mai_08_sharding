@@ -1,4 +1,5 @@
-FROM mysql:5.7.30
+FROM mariadb
+#mysql:5.7.30
 
 # Update and clean apt cache
 RUN apt-get clean && apt-get update --fix-missing && \
