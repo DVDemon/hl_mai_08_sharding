@@ -144,16 +144,16 @@ namespace database
                                                  result.push_back(id_to);
                                              more = record_set.moveNext();
                                          }
-                                         return result;
-                                     });
+                                         return result; });
 
             futures.emplace_back(std::move(handle));
         }
 
         // reduce phase
         // get values
-        for(std::future<std::vector<long>>& res : futures){
-            std::vector<long> v= res.get();
+        for (std::future<std::vector<long>> &res : futures)
+        {
+            std::vector<long> v = res.get();
             std::copy(std::begin(v),
                       std::end(v),
                       std::back_inserter(result));
@@ -204,8 +204,8 @@ namespace database
 
             while (!select.done())
             {
-                select.execute();
-                result.push_back(a);
+                if (select.execute())
+                    result.push_back(a);
             }
             return result;
         }

@@ -187,7 +187,9 @@ public:
                                     // Шаблон «сквозная-запись»
                                     // пишем и в БД и в кеш
                                     author.save_to_mysql();
-                                    ostr << "{ \"result\": true }";
+                                    ostr << "{ \"result\": \"";
+                                    ostr << author.id();
+                                    ostr << "\"}";
                                     return;
                                 }
                                 catch (...)

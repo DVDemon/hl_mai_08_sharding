@@ -41,14 +41,15 @@ using Poco::Util::ServerApplication;
 #include "../config/config.h"
 #include "../database/author.h"
 
-
 class HTTPWebServer : public Poco::Util::ServerApplication
 {
 public:
-    HTTPWebServer() : _helpRequested(false){
+    HTTPWebServer() : _helpRequested(false)
+    {
     }
 
-    ~HTTPWebServer(){
+    ~HTTPWebServer()
+    {
     }
 
 protected:
@@ -108,11 +109,10 @@ protected:
                 .repeatable(false)
                 .argument("value")
                 .callback(OptionCallback<HTTPWebServer>(this, &HTTPWebServer::handlePreLoad)));
-        
     }
 
     void handlePreLoad([[maybe_unused]] const std::string &name,
-                      [[maybe_unused]] const std::string &value)
+                       [[maybe_unused]] const std::string &value)
     {
         std::cout << "preloading ..." << value << std::endl;
         database::Author::preload(value);
@@ -137,12 +137,12 @@ protected:
         Config::get().password() = value;
     }
 
-     void handleDatabase([[maybe_unused]] const std::string &name,
-                         [[maybe_unused]] const std::string &value)
+    void handleDatabase([[maybe_unused]] const std::string &name,
+                        [[maybe_unused]] const std::string &value)
     {
         std::cout << "database:" << value << std::endl;
         Config::get().database() = value;
-    }   
+    }
     void handlePort([[maybe_unused]] const std::string &name,
                     [[maybe_unused]] const std::string &value)
     {
@@ -151,12 +151,11 @@ protected:
     }
 
     void handleHost([[maybe_unused]] const std::string &name,
-                      [[maybe_unused]] const std::string &value)
+                    [[maybe_unused]] const std::string &value)
     {
         std::cout << "host:" << value << std::endl;
         Config::get().host() = value;
     }
-
 
     void handleHelp([[maybe_unused]] const std::string &name,
                     [[maybe_unused]] const std::string &value)
@@ -181,7 +180,6 @@ protected:
             std::string format(
                 config().getString("HTTPWebServer.format",
                                    DateTimeFormat::SORTABLE_FORMAT));
-
 
             ServerSocket svs(Poco::Net::SocketAddress("0.0.0.0", port));
             HTTPServer srv(new HTTPRequestFactory(format),
