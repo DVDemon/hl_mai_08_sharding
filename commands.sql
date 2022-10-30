@@ -17,3 +17,5 @@ CREATE TABLE IF NOT EXISTS Message (
   PRIMARY KEY (id),
   KEY ft (id_from, id_to)
 );
+insert into Author (first_name,last_name,email,title) values ('Иван','Иванов','ivanov@yandex.ru','господин');
+insert into Author (first_name,last_name,email,title) values ('Петр','Петров','petrov@yandex.ru','господин');

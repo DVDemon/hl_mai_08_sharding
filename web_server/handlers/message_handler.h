@@ -66,10 +66,14 @@ public:
             long id_to = atol(form.get("id_to").c_str());
             try
             {
-                auto results = database::Message::read_all(id_from, id_to);
                 Poco::JSON::Array arr;
+                auto results = database::Message::read_all(id_from, id_to);         
                 for (auto s : results)
                     arr.add(s.toJSON());
+                results = database::Message::read_all(id_to, id_from);
+                for (auto s : results)
+                    arr.add(s.toJSON());
+                    
                 Poco::JSON::Stringifier::stringify(arr, ostr);
                 return;
             }
