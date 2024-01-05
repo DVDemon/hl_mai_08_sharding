@@ -1,7 +1,8 @@
 <!--
---- Readme.md Snippet without images Start ---
+&lt;--- Readme.md Snippet without images Start ---&gt;
 ## Tech Stack
 DVDemon/hl_mai_08_sharding is built on the following main stack:
+
 - [C++](http://www.cplusplus.com/) – Languages
 - [SQL](https://en.wikipedia.org/wiki/SQL) – Languages
 - [CMake](http://www.cmake.org/) – Java Build Tools
@@ -9,11 +10,13 @@ DVDemon/hl_mai_08_sharding is built on the following main stack:
 - [Docker](https://www.docker.com/) – Virtual Machine Platforms & Containers
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet without images End ---
 
---- Readme.md Snippet with images Start ---
+&lt;--- Readme.md Snippet without images End ---&gt;
+
+&lt;--- Readme.md Snippet with images Start ---&gt;
 ## Tech Stack
 DVDemon/hl_mai_08_sharding is built on the following main stack:
+
 - <img width='25' height='25' src='https://img.stackshare.io/service/1049/cplusplus.png' alt='C++'/> [C++](http://www.cplusplus.com/) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/2271/default_068d33483bba6b81ee13fbd4dc7aab9780896a54.png' alt='SQL'/> [SQL](https://en.wikipedia.org/wiki/SQL) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/2424/0UlUI_y1_400x400.jpg' alt='CMake'/> [CMake](http://www.cmake.org/) – Java Build Tools
@@ -21,14 +24,15 @@ DVDemon/hl_mai_08_sharding is built on the following main stack:
 - <img width='25' height='25' src='https://img.stackshare.io/service/586/n4u37v9t_400x400.png' alt='Docker'/> [Docker](https://www.docker.com/) – Virtual Machine Platforms & Containers
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet with images End ---
+
+&lt;--- Readme.md Snippet with images End ---&gt;
 -->
 <div align="center">
 
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [DVDemon/hl_mai_08_sharding](https://github.com/DVDemon/hl_mai_08_sharding)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|6<br/>Tools used|11/10/23 <br/>Report generated|
+|6<br/>Tools used|01/05/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -98,4 +102,4 @@ Full tech stack [here](/techstack.md)
 <br/>
 <div align='center'>
 
-Generated via [Stack File](https://github.com/apps/stack-file)
+Generated via [Stack File](https://github.com/marketplace/stack-file)
